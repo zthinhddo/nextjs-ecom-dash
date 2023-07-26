@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   AppBar,
   Box,
@@ -23,23 +23,17 @@ import {
 
 import MailIcon from '@mui/icons-material/Mail';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-
-type Anchor = "left" | "top";
+import { AppDefaultContext } from "@/app/context/context";
 
 const CustomAppBar = () => {
+  const [open, setOpen] = useState(false);
 
-  const [open, setOpen] = useState(); // open sidebar by default
-
-  const toggleSideBar = (status: boolean) => {
-    setOpen(status);
-  }
-
-  const handleCloseSideBar = () => {
-    setOpen(false);
+  const handleCloseAppBar = () => {
+    if (open) setOpen(false);
   }
 
   return (
-    <Drawer anchor="left" open={open} onClose={handleCloseSideBar}>
+    <Drawer anchor="left" open={open} onClose={handleCloseAppBar}>
       <Box>
         <List>
           {
