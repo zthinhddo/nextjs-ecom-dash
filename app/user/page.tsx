@@ -8,7 +8,7 @@ const MyDashboard = () => {
 
   return (
     <Paper elevation={0}>
-      This is dashboard page
+      This is user page
     </Paper>
   );
 };

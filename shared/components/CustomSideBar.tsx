@@ -5,19 +5,6 @@ import { useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
 function CustomSideBar() {
-  const theme = useTheme();
-
-  // Initial states
-  const [open, setOpen] = useState<Boolean>(false);
-
-  const handleSidebarOpen = () => {
-    setOpen(true);
-  };
-
-  const handleSidebarClose = () => {
-    setOpen(false);
-  };
-
   return (
     <AppBar position="static">
       <Toolbar component="div" disableGutters>

@@ -1,3 +1,4 @@
+
 import { Paper } from "@mui/material";
 
 const MyDashboard = () => {
@@ -8,7 +9,7 @@ const MyDashboard = () => {
 
   return (
     <Paper elevation={0}>
-      This is dashboard page
+      This is mail page
     </Paper>
   );
 };

@@ -113,7 +113,7 @@ export default function CustomHeader({ handleOpenMenu }) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         elevation={0}
-        position="fixed"
+        position="relative"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
@@ -133,7 +133,7 @@ export default function CustomHeader({ handleOpenMenu }) {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            Demo App
+            Task Manager
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -180,6 +180,7 @@ export default function CustomHeader({ handleOpenMenu }) {
           </Box>
         </Toolbar>
       </AppBar>
+      {/* Profile menu list */}
       {renderMenu}
     </Box>
   );
