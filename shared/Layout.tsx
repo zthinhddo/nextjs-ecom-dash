@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import { useState } from "react";
 import { CustomDrawer } from ".";
-import CustomHeader from "./components/CustomHeader";
+import CustomHeader from "./components/CustomAppBar";
 import Home from "./Home";
 
 

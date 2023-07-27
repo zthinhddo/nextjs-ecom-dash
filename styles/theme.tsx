@@ -1,7 +1,6 @@
 'use client';
 
 import { ThemeOptions } from "@mui/material/styles/createTheme";
-import red from '@mui/material/colors';
 
 const { createTheme } = require("@mui/material");
 
