@@ -1,17 +1,16 @@
+import { CustomDrawer } from "@/shared";
+import { Typography } from "@mui/material";
+import { Fragment } from "react";
 
-import { Paper } from "@mui/material";
-
-const MyDashboard = () => {
-
-  const handleClickOpenPage = () => {
-    window.open('https://shine.cyberlogitec.com.vn', '_blank');
-  };
+const MyFile = () => {
 
   return (
-    <Paper elevation={0}>
-      This is file management page
-    </Paper>
+    <main>
+      <Typography paragraph>
+        This is file
+      </Typography>
+    </main>
   );
 };
 
-export default MyDashboard;
+export default MyFile;

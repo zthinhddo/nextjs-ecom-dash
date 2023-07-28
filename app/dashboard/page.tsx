@@ -1,16 +1,13 @@
-import { Paper } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 
-const MyDashboard = () => {
-
-  const handleClickOpenPage = () => {
-    window.open('https://shine.cyberlogitec.com.vn', '_blank');
-  };
-
+const Dashboard = () => {
   return (
-    <Paper elevation={0}>
-      This is dashboard page
-    </Paper>
+    <main>
+      <Typography paragraph>
+        This is dashboard
+      </Typography>
+    </main>
   );
 };
 
-export default MyDashboard;
+export default Dashboard;

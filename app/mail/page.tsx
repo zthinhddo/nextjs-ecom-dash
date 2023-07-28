@@ -1,17 +1,15 @@
 
-import { Paper } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 
-const MyDashboard = () => {
-
-  const handleClickOpenPage = () => {
-    window.open('https://shine.cyberlogitec.com.vn', '_blank');
-  };
+const MyMail = () => {
 
   return (
-    <Paper elevation={0}>
-      This is mail page
-    </Paper>
+    <main>
+      <Typography paragraph>
+        This is Mail Page
+      </Typography>
+    </main>
   );
 };
 
-export default MyDashboard;
+export default MyMail;

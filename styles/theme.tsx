@@ -57,6 +57,12 @@ const themeOptions: ThemeOptions = {
       },
     },
   },
+  mixins: {
+    toolbar: {
+      minHeight: 60
+    }
+  },
+  direction: 'ltr'
 };
 
 // ---- Typescript specifically ----
