@@ -1,15 +1,13 @@
-import { CustomDrawer } from "@/shared";
-import { Typography } from "@mui/material";
-import { Fragment } from "react";
+import { Paper, Typography } from "@mui/material";
 
 const MyFile = () => {
 
   return (
-    <main>
-      <Typography paragraph>
-        This is file
+    <Paper elevation={0} className="relative w-full h-screen">
+      <Typography>
+        This is File page
       </Typography>
-    </main>
+    </Paper>
   );
 };
 

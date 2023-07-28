@@ -10,6 +10,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import { theme } from "@/styles/theme";
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import CloudIcon from '@mui/icons-material/Cloud';
 
 const NAVIGATION_URL = [
     {
@@ -35,12 +36,10 @@ const NAVIGATION_URL = [
 ];
 
 const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
+  display: 'flex',
+  // necessary for content to be below app bar
+  justifyContent: 'center',
 }));
 
 const MyStyleDrawer = styled(Drawer)(({ theme }) => ({
@@ -54,36 +53,43 @@ export const CustomDrawer = () => {
     <MyStyleDrawer
       anchor="left"
       open={isOpen}
-      onClose={toggleNavigationMenu}
       elevation={0}
       variant="persistent"
       sx={{
-        width: 240,
+        width: 180,
         flexShrink: 0,
-        '& .MuiDrawer-paper': {
-          width: 240,
-          boxSizing: 'border-box'
-        }
+        "& .MuiDrawer-paper": {
+          width: 180,
+          boxSizing: "border-box",
+        },
       }}
       transitionDuration={{
         enter: 200,
-        exit: 200 
+        exit: 200,
       }}
     >
       <DrawerHeader>
-        <IconButton onClick={toggleNavigationMenu}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
+        <IconButton
+          href="/"
+          size="large"
+          style={{ fontSize: "0.73em" }}
+          disableFocusRipple
+          disableRipple
+        >
+          <CloudIcon />
+        </IconButton>
       </DrawerHeader>
+      {/* <DrawerHeader>
+        <IconButton onClick={toggleNavigationMenu}>
+          {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+        </IconButton>
+      </DrawerHeader> */}
       {/* Content of the drawer: a list of menu item */}
       <List>
         {NAVIGATION_URL.map((menuItem, index) => {
           return (
             <ListItem key={`${menuItem.title}_${index}`} disablePadding>
-              <ListItemButton
-                href={menuItem.url}
-                onClick={() => toggleNavigationMenu()}
-              >
+              <ListItemButton href={menuItem.url}>
                 <ListItemIcon>{menuItem.icon}</ListItemIcon>
                 <ListItemText primary={menuItem.title}></ListItemText>
               </ListItemButton>
@@ -91,7 +97,6 @@ export const CustomDrawer = () => {
           );
         })}
       </List>
-      <Divider />
     </MyStyleDrawer>
   );
 };

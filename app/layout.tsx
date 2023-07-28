@@ -5,6 +5,7 @@ import * as React from 'react';
 import { NavigationMenuProvider } from './context';
 import './globals.css';
 import { Box, CssBaseline } from '@mui/material';
+import MainComponenet from '@/shared/components/MainComponent';
 
 export const metadata: Metadata = {
   title: 'Images Library Preview',
@@ -31,7 +32,9 @@ export default function RootLayout({
             <CustomAppBar />
             <CustomDrawer />
           </Box>
-          {children}
+          <MainComponenet>
+            {children}
+          </MainComponenet>
         </NavigationMenuProvider>
       </body>
     </html>

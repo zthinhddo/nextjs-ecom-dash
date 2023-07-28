@@ -2,11 +2,11 @@ import { Paper, Typography } from "@mui/material";
 
 const Dashboard = () => {
   return (
-    <main>
-      <Typography paragraph>
-        This is dashboard
+    <Paper elevation={0} className="relative w-full h-screen">
+      <Typography>
+        This is Dashboard page
       </Typography>
-    </main>
+    </Paper>
   );
 };
 

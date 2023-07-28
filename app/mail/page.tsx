@@ -4,11 +4,11 @@ import { Paper, Typography } from "@mui/material";
 const MyMail = () => {
 
   return (
-    <main>
-      <Typography paragraph>
-        This is Mail Page
+    <Paper elevation={0} className="relative w-full h-screen">
+      <Typography>
+        This is Mail page
       </Typography>
-    </main>
+    </Paper>
   );
 };
 

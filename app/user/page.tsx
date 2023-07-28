@@ -1,13 +1,13 @@
-import { Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 
 const MyUser = () => {
 
   return (
-    <main>
-      <Typography paragraph>
+    <Paper elevation={0} className="relative w-full h-screen">
+      <Typography>
         This is User page
       </Typography>
-    </main>
+    </Paper>
   );
 };
 

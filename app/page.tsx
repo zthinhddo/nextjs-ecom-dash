@@ -1,14 +1,10 @@
 'use client';
 
-import { Typography } from "@mui/material";
-import { useNavigationMenuContext } from "./context";
-import CustomMain from '@/shared/components/CustomMain';
+import { Typography, Paper } from "@mui/material";
 
 export default function App() {
-  const { isOpen } = useNavigationMenuContext();
-
   return (
-    <CustomMain open={isOpen}>
+    <Paper elevation={0} className="relative w-full h-screen">
       <Typography>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus
@@ -23,6 +19,6 @@ export default function App() {
         varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt.
         Lorem donec massa sapien faucibus et molestie ac.
       </Typography>
-    </CustomMain>
+    </Paper>
   );
 }

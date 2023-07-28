@@ -1,6 +1,6 @@
 'use client';
 
-import { MouseEventHandler, createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 // Define interface (Providing default values purpose)
 interface NavigationMenuContextValue {
@@ -16,7 +16,7 @@ const NavigationMenuContext = createContext<NavigationMenuContextValue>({
 });
 
 export const NavigationMenuProvider = ({ children } : { children: React.ReactNode }) => {
-    const [isOpen, setOpen] = useState(false);
+    const [isOpen, setOpen] = useState(true);
 
     const toggleNavigationMenu = () => {
         console.log('menu button clicked');
